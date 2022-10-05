@@ -5,8 +5,8 @@ pipeline
 	{
         stage('Build Stage')
 		{
-           	agent any
-            	steps 
+           		agent any
+            		steps 
 			{
 				echo 'This is Build part'
 			
@@ -17,6 +17,7 @@ pipeline
         	}
         stage('Test Stage')
 		{
+			agent any
 			steps
 			{
 				echo 'This is Test part'
