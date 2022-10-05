@@ -3,12 +3,17 @@ pipeline
     agent none
     stages 
 	{
-        stage('Test on Development Environ')
+        stage('Test on Development Environment')
 		{
            	agent any
             	steps 
 			{
-                	sh 'pip install -r requirements.txt'
+			echo 'This is Build part'
+			
+			sh 'python app.py'
+				
+			echo 'This is Test part'
+                	
                 	sh 'python test.py'
             		}
             	post 
